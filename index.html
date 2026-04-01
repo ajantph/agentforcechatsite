@@ -58,14 +58,7 @@
 	const utmMedium = urlParams.get('utm_medium');
 	const utmCampaign = urlParams.get('utm_campaign');
 	const esdName = 'MIAW - TPH Website';
-	const urlCommunity = urlParams.get('siteId');
-	if (urlCommunity) {
-		const communityCRMId = urlCommunity;
-		console.log("communityCRMId = urlCommunity" + communityCRMId);
-	} else {
-		const communityCRMId = 'a00WF00000g8XxoYAE';
-		console.log("communityCRMId != urlCommunity" + communityCRMId);	
-	}
+	const communityCRMId = urlParams.get('siteId');
 	
 	window.addEventListener("onEmbeddedMessagingReady", e => {
 		console.log("onEmbeddedMessagingReady event triggered");
