@@ -50,7 +50,7 @@
 	};
 	  
 	// const communityCRMId = 'a00WF00000g8Xx2YAE';
-	const communityCRMId;
+	
 	const websiteUrl = document.documentURI;
 	const referrerUrl = document.referrer;
 	const urlParams = new URLSearchParams(window.location.search);
@@ -60,10 +60,10 @@
 	const esdName = 'MIAW - TPH Website';
 	const urlCommunity = urlParams.get('siteId');
 	if (urlCommunity) {
-		communityCRMId = urlCommunity;
+		const communityCRMId = urlCommunity;
 		console.log("communityCRMId = urlCommunity" + communityCRMId);
 	} else {
-		communityCRMId = 'a00WF00000g8XxoYAE';
+		const communityCRMId = 'a00WF00000g8XxoYAE';
 		console.log("communityCRMId != urlCommunity" + communityCRMId);	
 	}
 	
