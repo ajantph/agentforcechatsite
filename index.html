@@ -50,7 +50,7 @@
 	};
 	  
 	// const communityCRMId = 'a00WF00000g8Xx2YAE';
-	const communityCRMId = 'a00WF00000g8XxoYAE';
+	const communityCRMId;
 	const websiteUrl = document.documentURI;
 	const referrerUrl = document.referrer;
 	const urlParams = new URLSearchParams(window.location.search);
@@ -62,7 +62,10 @@
 	if (urlCommunity) {
 		communityCRMId = urlCommunity;
 		console.log("communityCRMId = urlCommunity" + communityCRMId);
-	} else {console.log("communityCRMId != urlCommunity" + communityCRMId);	}
+	} else {
+		communityCRMId = 'a00WF00000g8XxoYAE';
+		console.log("communityCRMId != urlCommunity" + communityCRMId);	
+	}
 	
 	window.addEventListener("onEmbeddedMessagingReady", e => {
 		console.log("onEmbeddedMessagingReady event triggered");
