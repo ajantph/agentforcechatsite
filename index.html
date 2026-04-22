@@ -63,6 +63,9 @@
 	const communityCRMId = urlParams.get('siteId');
 	const floorplanNumber = urlParams.get('floorplanNumber');
 	const homesiteNumber = urlParams.get('homesiteNumber');
+		console.log("communityCRMId" + communityCRMId);
+		console.log("floorplanNumber" + floorplanNumber);
+		console.log("homesiteNumber" + homesiteNumber);
 	
 	window.addEventListener("onEmbeddedMessagingReady", e => {
 		console.log("onEmbeddedMessagingReady event triggered");
@@ -97,7 +100,9 @@
 			"utm_source": decodeURIComponent(utmSource),
 			"utm_medium": decodeURIComponent(utmMedium),
 			"utm_medium": decodeURIComponent(utmCampaign),
-			"ESD_Name": esdName
+			"ESD_Name": esdName,
+			"FloorplanNumber": floorplanNumber,
+			"HomesiteNumber": homesiteNumber
 		});
 	});
 	window.addEventListener("onEmbeddedMessagingButtonCreated", () => {
